@@ -1,0 +1,170 @@
+/* src/pages/Transacoes.module.css */
+
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Mesmo fundo do login */
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box; /* Garante que o padding não estoure a tela */
+}
+
+.contentBox {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 1.5rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.backLink {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #0056b3;
+}
+
+/* --- Tabela --- */
+.tableWrapper {
+  overflow-x: auto; /* Garante responsividade em telas pequenas */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Bordas limpas */
+  margin-top: 1.5rem;
+}
+
+.table th,
+.table td {
+  padding: 1rem 1.25rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #333;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* --- Cores para Receita/Despesa --- */
+.despesa {
+  color: #dc3545; /* Vermelho */
+  font-weight: 500;
+}
+
+.receita {
+  color: #28a745; /* Verde */
+  font-weight: 500;
+}
+
+/* --- Estados (Loading/Erro) --- */
+.loadingText,
+.errorText,
+.noDataText {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  padding: 3rem;
+}
+
+.errorText {
+  color: #dc3545;
+}
+
+/* --- NOVOS ESTILOS PARA OS BOTÕES --- */
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem; /* Espaço entre os botões */
+}
+
+.editButton,
+.deleteButton {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.editButton {
+  background-color: #ffc107; /* Amarelo */
+  color: #333;
+}
+
+.editButton:hover {
+  background-color: #e0a800;
+}
+
+.deleteButton {
+  background-color: #dc3545; /* Vermelho */
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.editButton:active,
+.deleteButton:active {
+  transform: scale(0.98); /* Efeito de clique */
+}
+
+.newButton {
+  display: inline-block;
+  background-color: #007bff; /* Azul primário */
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.newButton:hover {
+  background-color: #0056b3;
+}
+
+.newButton:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,101 @@
+.dashboardPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  padding: 1rem; /* Adicionado padding para telas pequenas */
+}
+
+.card {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 800px; /* Aumentei a largura máxima */
+  width: 100%;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem; /* Mais espaço */
+}
+
+/* --- Novo Grid de Navegação --- */
+.navGrid {
+  display: grid;
+  /* 3 colunas em desktop, 1 coluna em mobile */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Novo Card de Navegação (Substitui .link) --- */
+.navCard {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.navCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  border-color: #007bff;
+}
+
+.navCard svg {
+  width: 28px;
+  height: 28px;
+  color: #007bff;
+  margin-bottom: 0.75rem;
+}
+
+.navCard h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.navCard p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* --- Botão de Sair (Estilo mantido) --- */
+.button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background-color: #b02a37;
+}
+
+/* Remove o estilo .link antigo */
+/* .link { ... } */

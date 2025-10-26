@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+📊 Gerenciador de Gastos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicação web completa (Full Stack) para gerenciamento de finanças pessoais, permitindo o rastreamento de receitas e despesas, criação de orçamentos mensais e gerenciamento de categorias.
 
-## Available Scripts
+O projeto é construído com C# ASP.NET Core para o backend (API) e React.js para o frontend (Cliente).
 
-In the project directory, you can run:
+✨ Funcionalidades
 
-### `npm start`
+Autenticação de Usuários: Sistema de Registro e Login (via POST /api/Usuario e POST /api/Seguranca).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+CRUD de Transações: Funcionalidade completa para Criar, Ler, Editar e Excluir receitas e despesas.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+CRUD de Orçamentos: Funcionalidade completa para Criar, Ler, Editar e Excluir orçamentos mensais (com barra de progresso visual).
 
-### `npm test`
+CRUD de Categorias: Funcionalidade completa para Criar, Ler, Editar e Excluir categorias de gastos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Interface Reativa: Frontend construído em React com navegação (React Router) e estilização (CSS Modules).
 
-### `npm run build`
+🛠️ Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Aqui estão as principais tecnologias usadas para construir este projeto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend (API)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+C# e .NET: 8.0 (Target Framework)
 
-### `npm run eject`
+ASP.NET Core: Para a construção da API RESTful.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Entity Framework Core: Para o mapeamento Objeto-Relacional (ORM).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Autenticação: Microsoft.AspNetCore.Authentication.JwtBearer (Tokens JWT).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Banco de Dados: SQL Server (Verificar appsettings.json).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Validação: FluentValidation.
 
-## Learn More
+Frontend (Cliente)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Node.js: v20.18.1
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React: [VERSÃO DO REACT, ex: v18.3.1] (Verificar no package.json)
 
-### Code Splitting
+Roteamento: react-router-dom
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Requisições HTTP: axios
 
-### Analyzing the Bundle Size
+Decodificação de Token: jwt-decode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Estilização: CSS Modules.
 
-### Making a Progressive Web App
+🚀 Como Executar o Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Pré-requisitos
 
-### Advanced Configuration
+Para rodar este projeto localmente, você precisará ter instalado:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+.NET SDK (8.0.400)
 
-### Deployment
+Node.js (v20.18.1)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Um SGBD compatível (ex: SQL Server Express)
 
-### `npm run build` fails to minify
+1. Backend (C# API)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clone o repositório:
+
+git clone [https://github.com/](https://github.com/)[SEU-USUARIO-GIT]/[NOME-DO-REPOSITORIO].git
+
+
+Navegue até a pasta do backend:
+
+cd [CAMINHO-PARA-O-PROJETO]/gerenciaGastos
+
+
+Configurar o Banco de Dados:
+
+Abra o ficheiro appsettings.json.
+
+Altere a "DefaultConnection" na ConnectionStrings para apontar para o seu servidor de banco de dados local.
+
+Instale as dependências e aplique as migrations (crie o banco):
+
+dotnet restore
+dotnet ef database update
+
+
+Execute o backend:
+
+dotnet run
+
+
+A API estará rodando em https://localhost:7032.
+
+2. Frontend (React App)
+
+Num novo terminal, navegue até a pasta do frontend:
+
+cd [CAMINHO-PARA-O-PROJETO]/gerencia-gastos-front
+
+
+Instale os pacotes NPM:
+
+npm install
+
+
+Execute o frontend:
+
+npm start
+
+
+O cliente React estará rodando em http://localhost:3000.
+
+(O app abrirá automaticamente no seu navegador).

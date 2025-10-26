@@ -1,0 +1,100 @@
+/* Este é um CSS Module. Os nomes das classes serão únicos para este componente. */
+
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Um cinza claro para o fundo da página */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.loginContainer {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+
+.title {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem; /* 16px */
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Espaço entre os inputs */
+}
+
+.inputGroup {
+  width: 100%;
+  text-align: left;
+}
+
+/* Escondemos a label visualmente, mas a mantemos para acessibilidade */
+.label {
+  display: none;
+}
+
+.input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Garante que o padding não quebre o layout */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+}
+
+.button {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff; /* Azul primário */
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* Estilo para a mensagem de erro */
+.error {
+  color: #dc3545; /* Vermelho */
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
