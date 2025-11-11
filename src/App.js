@@ -17,6 +17,7 @@ import CriarOrcamentoPage from './pages/CriarOrcamento';
 import CategoriasPage from './pages/Categorias';
 import CriarCategoriaPage from './pages/CriarCategoria';
 import EditarCategoriaPage from './pages/EditarCategoria';
+import GraficosPage from "./pages/Graficos";
 
 import './App.css';
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/categorias" element={<CategoriasPage />} />
             <Route path="/categorias/nova" element={<CriarCategoriaPage />} />
             <Route path="/categorias/editar/:id" element={<EditarCategoriaPage />} />
+            <Route path="/graficos" element={<GraficosPage />} />
           </Route>
           
           <Route path="/" element={<Navigate to="/dashboard" replace />} />

@@ -52,6 +52,14 @@ function DashboardPage() {
             <h3>Gerir Categorias</h3>
             <p>Criar e editar as suas categorias de gastos.</p>
           </Link>
+
+          <Link to="/graficos" className={styles.navCard}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5V21h4.5l9-9-4.5-4.5-9 9z" />
+            </svg>
+            <h3>Análises e Gráficos</h3>
+            <p>Visualizar gastos, receitas e comparativos.</p>
+          </Link>
         </div>
 
         <button onClick={handleLogout} className={styles.button}>

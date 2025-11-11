@@ -130,4 +130,15 @@ export const deleteCategoriaApi = async (id) => {
   await api.delete(`/Categoria/${id}`);
 };
 
+export const getResumoPorCategoriaApi = async () => {
+  const hoje = new Date().toISOString().split("T")[0]; // AAAA-MM-DD
+  const primeiroDiaMes = hoje.slice(0, 8) + "01";      // AAAA-MM-01
+
+  const response = await api.get(
+    `/Transacao/por-categoria?start=${primeiroDiaMes}&end=${hoje}`
+  );
+
+  return response.data;
+};
+
 export default api;
